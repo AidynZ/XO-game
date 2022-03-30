@@ -2,29 +2,29 @@
 # XO-game for homework (FPW-64 SkillFactory)
 
 
-BOARD = {1: '_', 2: '_', 3: '_', 4: '_', 5: '_', 6: '_', 7: '_', 8: '_', 9: '_'}  # - Game board for print
+BOARD = {1: '_', 2: '_', 3: '_', 4: '_', 5: '_', 6: '_', 7: '_', 8: '_', 9: '_'}  # - Игровое поле 
 
 PLAYERS = {
-    'X': [],  # - Cells for X-sign
-    'O': []   # - Cells for O-sign
+    'X': [],  # - значки - X
+    'O': []   # - значки - O
 }
 
 WIN_RULES = (
-    (7, 8, 9),  # - top horizontal line
-    (4, 5, 6),  # - middle  horizontal line
-    (1, 2, 3),  # - bottom horizontal line
-    (1, 4, 7),  # - left vertical line
-    (2, 5, 8),  # - middle vertical line
-    (3, 6, 9),  # - right vertical line
-    (3, 5, 7),  # - \ line
-    (1, 5, 9)   # - / line
+    (1, 2, 3),  # - верхняя горизонтальная линия
+    (4, 5, 6),  # - средняя горизонтальная линия
+    (7, 8, 9),  # - нижняя горизонтальная линия
+    (1, 4, 7),  # - левая вертикальная линия
+    (2, 5, 8),  # - средняя вертикальная линия
+    (3, 6, 9),  # - правая вертикальная линия
+    (1, 5, 9),  # - \ диагональная линия 
+    (3, 5, 7)   # - / диагональная линия
 )
 
 
 def print_board():
-    print(f'{BOARD[7]} {BOARD[8]} {BOARD[9]}')
-    print(f'{BOARD[4]} {BOARD[5]} {BOARD[6]}')
     print(f'{BOARD[1]} {BOARD[2]} {BOARD[3]}')
+    print(f'{BOARD[4]} {BOARD[5]} {BOARD[6]}')
+    print(f'{BOARD[7]} {BOARD[8]} {BOARD[9]}')
 
 
 def win_check(sign):
